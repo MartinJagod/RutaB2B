@@ -1,0 +1,189 @@
+/* Estructura principal */
+.projects-section {
+    padding: 0px;
+    text-decoration: none;
+
+
+}
+a {
+    text-decoration: none;
+
+}
+.projects-content {
+  margin-top: 10px;
+
+} 
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+    text-decoration: none;
+
+}
+
+.logo-img {
+    max-width: 150px;
+}
+/* Carrusel */
+.carousel-wrapper-projectsHome {
+    margin-bottom: 0px;
+}
+
+.carousel-wrapper-projectsHome h2 {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #444;
+}
+
+.carousel-container-projectsHome {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* Oculta scrollbars en IE y Edge */
+    scrollbar-width: none; /* Oculta scrollbars en Firefox */
+    width: 100vw;
+    height: 200px;
+    gap: 5px
+}
+
+.carousel-container-projectsHome::-webkit-scrollbar {
+    display: none; /* Oculta scrollbars en navegadores basados en WebKit */
+   
+}
+
+.carousel-item-projectsHome {
+    flex: 0 0 auto;
+    width: 145px; /* Ancho específico del contenedor */
+    height: 170px; /* Alto específico del contenedor */
+    position: relative; /* Necesario para posicionar el texto */
+    overflow: hidden; /* Recorta el exceso de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f5f5f5; /* Fondo por defecto para imágenes sin cargar */
+}
+
+.carousel-image-projectsHome {
+    width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+    height: 100%; /* La imagen ocupa el alto completo del contenedor */
+    object-fit: cover; /* Mantiene la proporción y recorta el exceso */
+}
+
+/* Texto sobre la imagen */
+.carousel-item-projectsHome p {
+    position: absolute; /* Posiciona el texto relativo al contenedor */
+    bottom: 0; /* Coloca el texto en la parte inferior */
+    left: 0;
+    width: 100%; /* Asegura que el texto ocupe todo el ancho del contenedor */
+    margin: 0; /* Elimina márgenes del párrafo */
+    padding: 5px; /* Espaciado interno para el texto */
+    font-size: 12px;
+    font-weight: 800;
+    text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);/* Sombra para mejorar la legibilidad */
+    margin-bottom: 8px;
+    color: white; /* Color del texto */
+    /*background-color: rgba(0, 0, 0, 0.6);  Fondo semitransparente para destacar el texto */
+    text-align: left; /* Centra el texto horizontalmente */
+    border-bottom-left-radius: 10px; /* Redondea esquinas inferiores */
+    border-bottom-right-radius: 10px; /* Redondea esquinas inferiores */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .carousel-container-projectsHome {
+        gap: 5px;
+    }
+
+    .carousel-item-projectsHome {
+        width: 145px; /* Ajusta el ancho en dispositivos pequeños */
+        height: 170px; /* Ajusta el alto en dispositivos pequeños */
+    }
+
+    .carousel-image-projectsHome {
+        height: 100%; /* La imagen se adapta al nuevo alto */
+    }
+}
+.section-input {
+    width: 40vw;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    outline: none;
+    background: none;
+    color: #444;
+    font-size: 13px;
+    font-weight: 800;
+    text-align: center;
+    margin-left: 15px;
+    padding: 4px 0;
+    text-decoration: none;
+    font-family: "Montserrat";
+    margin-top: 15px;
+    margin-bottom: -12px;
+    appearance: none; /* Remueve la flecha en navegadores compatibles */
+    -webkit-appearance: none; /* Remueve la flecha en WebKit (Safari/Chrome) */
+    -moz-appearance: none; /* Remueve la flecha en Firefox */
+}
+
+.logo-slogan {
+    width: 180px;
+    margin-top: 10px;
+}
+.contact-section {
+    padding-top: 0px;
+    padding-left: 20px;
+}
+/* Contenedor del carrusel */
+.carousel-container-projectsHome {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  /* Elementos individuales */
+  .carousel-item-projectsHome {
+    opacity: 0; /* Inicialmente invisibles */
+    transform: translateY(20px); /* Aparecen desde abajo */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Animación de entrada */
+  }
+  
+  /* Aplica un retraso escalonado basado en el índice */
+  .carousel-item-projectsHome:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .carousel-item-projectsHome:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .carousel-item-projectsHome:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  /* Continúa para más elementos */
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .carousel-container-projectsHome {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    cursor: grab;
+    user-select: none;
+    white-space: nowrap;
+  }
+  
+  .carousel-item-projectsHome {
+   
+    transition: transform 0.3s ease-out;
+  }
+  
+  .carousel-container-projectsHome:active {
+    cursor: grabbing;
+  }
+  
